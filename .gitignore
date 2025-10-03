@@ -3,6 +3,7 @@ LMUData/
 stats.ipynb
 SimSun.ttf
 microbench_add.ipynb.idea/
+outputs/
 
 # Byte-compiled / optimized / DLL files
 VLMEvalKit/**/__pycache__/
