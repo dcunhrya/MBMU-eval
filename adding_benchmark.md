@@ -12,6 +12,13 @@ Minimum needed for MCQ:
 - answer
 - (optional) hint, category, split
 
+python add_microbench.py \
+  --task classification \
+  --split test \
+  --limit 10 \
+  --out_img_dir ~/MBMU-eval/LMUData/uBench/images \
+  --out_tsv     ~/MBMU-eval/LMUData/uBench/uBench_classification_10.tsv
+
 2) Create a minimal dataset class
 Probably will inherit from ImageMCQDataset
 - build_prompt(self, line)
@@ -22,6 +29,9 @@ Create a new file in vlmeval/dataset/
     There is an example called microbench.py
 Add to vlmeval/dataset/__init__.py in IMAGE_DATASET list and import statement
 run.py to add dataset in and run inference
+
+python3 VLMEvalKit/run.py --data MICROBENCH --data_file uBench/uBench_classification
+_10.tsv --model qwen_chat --verbose
 
 4) Determinisitc and MCQ-tight?
 (GPT said to add this)
@@ -38,3 +48,4 @@ create agent for this entire step
 Add AR models
 Run inference with models
 Statistics
+use uv to track requirements

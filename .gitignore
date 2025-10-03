@@ -1,2 +1,216 @@
-VLMEvalKit/
-venv/
+__pycache__/
+LMUData/
+stats.ipynb
+SimSun.ttf
+microbench_add.ipynb.idea/
+
+# Byte-compiled / optimized / DLL files
+VLMEvalKit/**/__pycache__/
+VLMEvalKit/**/*.py[cod]
+VLMEvalKit/**/*$py.class
+
+# C extensions
+VLMEvalKit/**/*.so
+
+# Distribution / packaging
+VLMEvalKit/**/.Python
+VLMEvalKit/**/build/
+VLMEvalKit/**/develop-eggs/
+VLMEvalKit/**/ist/
+VLMEvalKit/**/downloads/
+VLMEvalKit/**/eggs/
+VLMEvalKit/**/.eggs/
+VLMEvalKit/**/lib/
+VLMEvalKit/**/lib64/
+VLMEvalKit/**/parts/
+VLMEvalKit/**/sdist/
+VLMEvalKit/**/var/
+VLMEvalKit/**/wheels/
+VLMEvalKit/**/share/python-wheels/
+VLMEvalKit/**/*.egg-info/
+VLMEvalKit/**/.installed.cfg
+VLMEvalKit/**/*.egg
+VLMEvalKit/**/MANIFEST
+VLMEvalKit/**/.vscode/
+VLMEvalKit/**/.gradio/
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+VLMEvalKit/**/*.manifest
+VLMEvalKit/**/*.spec
+
+# Installer logs
+VLMEvalKit/**/pip-log.txt
+VLMEvalKit/**/pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+VLMEvalKit/**/htmlcov/
+VLMEvalKit/**/.tox/
+VLMEvalKit/**/.nox/
+VLMEvalKit/**/.coverage
+VLMEvalKit/**/.coverage.*
+VLMEvalKit/**/.cache
+VLMEvalKit/**/nosetests.xml
+VLMEvalKit/**/coverage.xml
+VLMEvalKit/**/*.cover
+VLMEvalKit/**/*.py,cover
+VLMEvalKit/**/.hypothesis/
+VLMEvalKit/**/.pytest_cache/
+VLMEvalKit/**/cover/
+
+# Translations
+VLMEvalKit/**/*.mo
+VLMEvalKit/**/*.pot
+
+# Django stuff:
+VLMEvalKit/**/*.log
+VLMEvalKit/**/local_settings.py
+VLMEvalKit/**/db.sqlite3
+VLMEvalKit/**/db.sqlite3-journal
+
+# Flask stuff:
+VLMEvalKit/**/instance/
+VLMEvalKit/**/.webassets-cache
+
+# Scrapy stuff:
+VLMEvalKit/**/.scrapy
+
+# Sphinx documentation
+VLMEvalKit/**/docs/_build/
+
+# PyBuilder
+VLMEvalKit/**/.pybuilder/
+VLMEvalKit/**/target/
+
+# Jupyter Notebook
+VLMEvalKit/**/.ipynb_checkpoints
+
+# IPython
+VLMEvalKit/**/profile_default/
+VLMEvalKit/**/ipython_config.py
+
+# pyenv
+#   For a library or package, you might want to ignore these files since the code is
+#   intended to run in multiple environments; otherwise, check them in:
+# .python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# poetry
+#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
+#   This is especially recommended for binary packages to ensure reproducibility, and is more
+#   commonly ignored for libraries.
+#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+#poetry.lock
+
+# pdm
+#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
+#pdm.lock
+#   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
+#   in version control.
+#   https://pdm.fming.dev/#use-with-ide
+VLMEvalKit/**/.pdm.toml
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+VLMEvalKit/**/__pypackages__/
+
+# Celery stuff
+VLMEvalKit/**/celerybeat-schedule
+VLMEvalKit/**/celerybeat.pid
+
+# SageMath parsed files
+VLMEvalKit/**/*.sage.py
+
+# Environments
+VLMEvalKit/**/.env
+VLMEvalKit/**/.venv
+VLMEvalKit/**/env/
+VLMEvalKit/**/venv/
+VLMEvalKit/**/ENV/
+VLMEvalKit/**/env.bak/
+VLMEvalKit/**/venv.bak/
+VLMEvalKit/**/environment.yml
+
+# Spyder project settings
+VLMEvalKit/**/.spyderproject
+VLMEvalKit/**/.spyproject
+
+# Rope project settings
+VLMEvalKit/**/.ropeproject
+
+# mkdocs documentation
+VLMEvalKit/**//site
+
+# mypy
+VLMEvalKit/**/.mypy_cache/
+VLMEvalKit/**/.dmypy.json
+VLMEvalKit/**/dmypy.json
+
+# Pyre type checker
+VLMEvalKit/**/.pyre/
+
+# pytype static type analyzer
+VLMEvalKit/**/.pytype/
+
+# Cython debug symbols
+VLMEvalKit/**/cython_debug/
+
+# Images
+VLMEvalKit/**/images/
+
+VLMEvalKit/**/scripts/*ttf
+VLMEvalKit/**/.history
+VLMEvalKit/**/cache_dir/*
+
+# Evaluation Outputs
+VLMEvalKit/**/outputs/*
+VLMEvalKit/**/demo.ipynb
+VLMEvalKit/**/*json
+VLMEvalKit/**/!vlmeval/dataset/utils/vgrpbench/configs/formating-prompt/**/*.json
+VLMEvalKit/**/.vscode
+VLMEvalKit/**/*.swp
+VLMEvalKit/**/GPT4o_MINI/
+
+VLMEvalKit/**/2weiyun*
+VLMEvalKit/**/script.py
+VLMEvalKit/**/Gemini*
+VLMEvalKit/**/Claude3-5V*
+VLMEvalKit/**/GLM4V*
+VLMEvalKit/**/GPT4o*
+VLMEvalKit/**/GPT4V*
+VLMEvalKit/**/mmmu_debug
+VLMEvalKit/**/bailingMM
+VLMEvalKit/**/BailingMM*
+VLMEvalKit/**/SenseChat*
+VLMEvalKit/**/Step*
+VLMEvalKit/**/DoubaoVL
+VLMEvalKit/**/arch
+VLMEvalKit/**/BlueLM*
+VLMEvalKit/**/mmb_*
+VLMEvalKit/**/gpt-4.1*
+VLMEvalKit/**/Reka*
+VLMEvalKit/**/Taiyi
+VLMEvalKit/**/TeleMM
+VLMEvalKit/**/apple.jpg
+VLMEvalKit/**/assets/LOGO.png
+VLMEvalKit/**/api_list.txt
+VLMEvalKit/**/vlmeval/gemini_tmp.py
+VLMEvalKit/**/run.sh
+VLMEvalKit/**/run_g.sh
+VLMEvalKit/**/tmp/
+VLMEvalKit/**/InternVL*
+VLMEvalKit/**/Qwen*
+VLMEvalKit/**/CongRong*
+VLMEvalKit/**/Seed1.5*
+VLMEvalKit/**/aguvis*
+VLMEvalKit/**/grok-*
+VLMEvalKit/**/GLM4.5*
+VLMEvalKit/**/SenseNova*
+
+VLMEvalKit/**/.DS_Store
