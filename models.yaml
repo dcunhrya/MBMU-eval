@@ -43,3 +43,12 @@ models:
     max_new_tokens: 128
     temperature: 0.0
     top_p: 1.0
+
+  - name: llava_med_local
+    cls: vlmeval.vlm.llava_med.LLaVAMedLocal
+    weights: microsoft/llava-med-v1.5-mistral-7b
+    device: cuda
+    dtype: auto
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
