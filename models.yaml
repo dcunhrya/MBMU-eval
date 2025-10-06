@@ -1,7 +1,7 @@
 models:
   - name: llava_med
-    cls: HuggingFaceVisionVLM
-    path: microsoft/llava-med-v1.5-mistral-7b
+    cls: LLaVAMedLocal
+    path: "microsoft/llava-med-v1.5-mistral-7b"
     device: cuda        
     dtype: auto
     max_new_tokens: 128
@@ -9,7 +9,7 @@ models:
     top_p: 1.0
 
   - name: huatuo_vg_7b
-    cls: HuggingFaceVisionVLM
+    cls: HuatuoVision7b
     path: FreedomIntelligence/HuatuoGPT-Vision-7B
     device: cuda
     dtype: auto
@@ -18,7 +18,7 @@ models:
     top_p: 1.0
 
   - name: huatuo_vg_34b
-    cls: HuggingFaceVisionVLM
+    cls: HuatuoVision34b
     path: FreedomIntelligence/HuatuoGPT-Vision-34B
     device: cuda      
     dtype: bf16
@@ -27,7 +27,7 @@ models:
     top_p: 1.0
 
   - name: llava_tri_pretrained
-    cls: HuggingFaceVisionVLM
+    cls: LLaVATriPretrained
     path: yunfeixie/LLaVA-Tri-Pretrained
     device: cuda
     dtype: auto
@@ -44,9 +44,9 @@ models:
     temperature: 0.0
     top_p: 1.0
 
-  - name: llava_med_local
-    cls: vlmeval.vlm.llava_med.LLaVAMedLocal
-    weights: microsoft/llava-med-v1.5-mistral-7b
+  - name: med_gemma
+    cls: HuggingFaceVisionVLM 
+    path: google/medgemma-4b-it
     device: cuda
     dtype: auto
     max_new_tokens: 128
