@@ -8,7 +8,7 @@ models:
     temperature: 0.0
     top_p: 1.0
 
-  - name: huatuo_vg_7b
+  - name: huatuo_7b
     cls: HuatuoVision7b
     path: FreedomIntelligence/HuatuoGPT-Vision-7B
     device: cuda
@@ -17,7 +17,7 @@ models:
     temperature: 0.0
     top_p: 1.0
 
-  - name: huatuo_vg_34b
+  - name: huatuo_34b
     cls: HuatuoVision34b
     path: FreedomIntelligence/HuatuoGPT-Vision-34B
     device: cuda      
@@ -35,9 +35,18 @@ models:
     temperature: 0.0
     top_p: 1.0
 
-  - name: med_moe
-    cls: HuggingFaceVisionVLM
-    path: JsST/Med-MoE
+  - name: med_moe_phi
+    cls: LLaVAPhi
+    path: "JsST/Med-MoE-stage3-llavaphi-2.7b-medmoe"
+    device: cuda
+    dtype: auto
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
+  
+  - name: med_moe_slm
+    cls: LLaVAStableLM
+    path: "JsST/Med-MoE-stage3-llavastablelm-1.6b-medmoe"
     device: cuda
     dtype: auto
     max_new_tokens: 128
@@ -47,6 +56,34 @@ models:
   - name: med_gemma
     cls: HuggingFaceVisionVLM 
     path: google/medgemma-4b-it
+    device: cuda
+    dtype: auto
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
+
+  # - name: med_flamingo
+  #   cls: MedFlamingo
+  #   lm_path: meta-llama/Llama-2-7b-hf   
+  #   clip_name: openai/clip-vit-large-patch14
+  #   med_ckpt: /abs/path/to/med_flamingo_ckpt.pt  # set to your checkpoint (or null for pure OpenFlamingo)
+  #   dtype: bf16
+  #   device: cuda
+  #   max_new_tokens: 128
+  #   temperature: 0.0
+  #   top_p: 1.0
+
+  - name: biomedgpt
+    cls: BioMedGPT 
+    path: PanaceaAI/BiomedGPT-Base-Pretrained
+    device: cuda
+    dtype: auto
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
+
+  - name: vividmed
+    cls: VividMed 
     device: cuda
     dtype: auto
     max_new_tokens: 128
