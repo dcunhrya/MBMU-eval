@@ -32,3 +32,8 @@ My current prompt:
             f"Respond with the letter between ({letters[0]} and {letters[-1]}) corresponding to the answer choice from the options. No explanation. \n"
             # f"Choose the single best answer that answers the question. Respond with ONE capital letter only between ({letters[0]} and {letters[-1]}). \n"
         )`
+
+## Model Specific Instructions
+
+- MedGemma (`med_gemma`)
+    - Must login to huggingface and sign agreement for model `huggingface-cli login`
