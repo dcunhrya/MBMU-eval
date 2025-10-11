@@ -1,0 +1,2 @@
+[submodule "VLMEvalKit"]
+	url = https://github.com/dcunhrya/VLMEvalKit.git
