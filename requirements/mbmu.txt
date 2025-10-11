@@ -75,7 +75,7 @@ latex2mathml==3.78.1
 linkify-it-py==2.0.3
 lit==18.1.8
 llava==0.0.1.dev0
--e file:///home/ubuntu/MBMU-eval/VLMEvalKit/LLava-Med
+-e ./LLava-Med
 markdown-it-py==2.2.0
 markdown2==2.5.4
 markupsafe==2.1.5
@@ -205,7 +205,7 @@ urllib3 @ file:///croot/urllib3_1750775463400/work
 uv==0.8.22
 uvicorn==0.37.0
 validators==0.35.0
--e /home/ubuntu/MBMU-eval/VLMEvalKit
+-e ./VLMEvalKit
 wavedrom==2.0.3.post3
 wcwidth==0.2.14
 websockets==11.0.3

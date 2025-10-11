@@ -1,0 +1,7 @@
+name: moe
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - cudatoolkit-dev
+prefix: /home/ubuntu/miniconda3/envs/moe

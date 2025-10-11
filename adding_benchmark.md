@@ -38,8 +38,7 @@ run.py to add dataset in and run inference
 
 example cli command
 
-`python3 VLMEvalKit/run.py --data MICROBENCH --data_file uBench/uBench_classification
-_10.tsv --model qwen_chat --verbose`
+`python3 VLMEvalKit/run.py --data MICROBENCH --data_file uBench/uBench_classification_10.tsv --model qwen_chat --verbose`
 
 4) Determinisitc and MCQ-tight?
 - Prompt discipline

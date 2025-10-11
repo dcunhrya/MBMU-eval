@@ -62,26 +62,6 @@ models:
     temperature: 0.0
     top_p: 1.0
 
-  # - name: med_flamingo
-  #   cls: MedFlamingo
-  #   lm_path: meta-llama/Llama-2-7b-hf   
-  #   clip_name: openai/clip-vit-large-patch14
-  #   med_ckpt: /abs/path/to/med_flamingo_ckpt.pt  # set to your checkpoint (or null for pure OpenFlamingo)
-  #   dtype: bf16
-  #   device: cuda
-  #   max_new_tokens: 128
-  #   temperature: 0.0
-  #   top_p: 1.0
-
-  - name: biomedgpt
-    cls: BioMedGPT 
-    path: PanaceaAI/BiomedGPT-Base-Pretrained
-    device: cuda
-    dtype: auto
-    max_new_tokens: 128
-    temperature: 0.0
-    top_p: 1.0
-
   - name: vividmed
     cls: VividMed 
     device: cuda

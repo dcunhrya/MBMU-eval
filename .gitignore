@@ -4,6 +4,8 @@ stats.ipynb
 SimSun.ttf
 microbench_add.ipynb.idea/
 outputs/
+adapter_dir/
+cache_dir/
 
 # Byte-compiled / optimized / DLL files
 VLMEvalKit/**/__pycache__/

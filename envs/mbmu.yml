@@ -1,0 +1,6 @@
+name: mbmu
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+prefix: /home/ubuntu/miniconda3/envs/mbmu

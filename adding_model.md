@@ -1,4 +1,5 @@
 # Model Support
+Each model specific instructions shown below
 ## Models Added
 All models shown in models.yaml to see how to call it in cli
 - LLava-Med
@@ -13,12 +14,15 @@ All models shown in models.yaml to see how to call it in cli
 
 ## In Progress
 - VividMed
-- BiomedGPT
-
-## To Do
-- HealthGPT
 - RadFM
 - BioGPT (LLM)
+
+
+## To Do
+- BiomedGPT
+    - OFA deprecated
+- HealthGPT
+    - Can't do because config.json is corrupted so can't low in
 
 
 My current prompt:
