@@ -7,7 +7,6 @@ aiosignal==1.4.0
 altair==5.5.0
 annotated-types==0.7.0
 antlr4-python3-runtime==4.8
-antlr4-python3-runtime @ file:///home/conda/feedstock_root/build_artifacts/antlr-python-runtime-meta_1638309185939/work
 anyio==4.11.0
 asttokens==3.0.0
 attrs==25.3.0
@@ -80,8 +79,8 @@ librosa==0.11.0
 lightning-utilities==0.15.2
 linkify-it-py==2.0.3
 lit==18.1.8
--e ./LLaVA
--e ./LLavaMed
+-e ./VLMEvalKit/LLaVA
+-e ./VLMEvalKit/LLavaMed
 llvmlite==0.45.1
 lxml==6.0.2
 markdown==3.9
@@ -127,7 +126,7 @@ nvidia-nccl-cu12==2.18.1
 nvidia-nvjitlink-cu12==12.8.93
 nvidia-nvtx-cu11==11.7.91
 nvidia-nvtx-cu12==12.1.105
-omegaconf @ file:///home/conda/feedstock_root/build_artifacts/omegaconf_1670575376789/work
+omegaconf==2.3.0
 openai==1.12.0
 opencv-python==4.12.0.88
 openpyxl==3.1.2
@@ -166,7 +165,7 @@ python-levenshtein==0.27.1
 python-multipart==0.0.20
 pytorch-lightning==2.5.5
 pytz==2025.2
-pyyaml @ file:///home/conda/feedstock_root/build_artifacts/pyyaml_1758891825788/work
+pyyaml
 qwen-vl-utils==0.0.14
 rapidfuzz==3.14.1
 referencing==0.36.2
@@ -217,7 +216,6 @@ transformers==4.37.2
 triton==2.0.0
 typeguard==4.4.4
 typer==0.19.2
-typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_typing_extensions_1756220668/work
 typing-inspection==0.4.2
 tzdata==2025.2
 uc-micro-py==1.0.3

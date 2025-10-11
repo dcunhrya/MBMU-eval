@@ -55,7 +55,7 @@ jsonschema-specifications==2025.9.1
 kiwisolver==1.4.9
 latex2mathml==3.78.1
 lit==18.1.8
--e ./LLaVA
+-e ./VLMEvalKit/LLaVA
 markdown-it-py==4.0.0
 markdown2==2.5.4
 markupsafe==2.1.5
@@ -105,7 +105,6 @@ parso==0.8.5
 peft==0.17.1
 pexpect==4.9.0
 pillow==10.4.0
-pip @ file:///croot/pip_1756710021410/work
 portalocker==3.2.0
 prompt-toolkit==3.0.52
 protobuf==6.32.1

@@ -1,4 +1,12 @@
 # How to Run MBMU VLM Eval Kit
+## DO THIS BEFORE ANYTHING
+** Note: You must be on a device that has a GPU available **
+1) Install git-lfs
+- If on mac: `brew install git-lfs`
+- If Ubuntu: `sudo apt-get install -y git-lfs`
+2) Intialize LFS: `git lfs install`
+3) Intialize submodules of VLMEvalKit: `git submodule update --init --recursive`
+4) Now install conda environments
 
 ## Conda Environments
 There are conda environments for specific models (shown in `adding_model.md`)

@@ -3,5 +3,4 @@ channels:
   - defaults
 dependencies:
   - python=3.11
-  - omegaconf=2.3.0
 prefix: /home/ubuntu/miniconda3/envs/llava

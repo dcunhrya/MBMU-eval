@@ -59,7 +59,7 @@ jsonschema-specifications==2025.9.1
 kiwisolver==1.4.9
 linkify-it-py==2.0.3
 lit==18.1.8
--e ./LLava-Med
+-e ./VLMEvalKit/LLavaMed
 markdown-it-py==2.2.0
 markdown2==2.4.10
 markupsafe==3.0.3
@@ -110,7 +110,6 @@ pathtools==0.1.2
 peft==0.4.0
 pexpect==4.9.0
 pillow==11.3.0
-pip @ file:///croot/pip_1756710021410/work
 portalocker==3.2.0
 prompt-toolkit==3.0.52
 propcache==0.4.1

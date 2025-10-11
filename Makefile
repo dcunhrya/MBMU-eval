@@ -28,31 +28,46 @@ all: flamingo llava mbmu huatuo1 moe
 flamingo:
 	@echo "Setting up flamingo environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/flamingo.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/flamingo.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && conda activate flamingo && uv pip install --system -r $(REQ_DIR)/flamingo.txt
+	source $$(conda info --base)/etc/profile.d/conda.sh && \
+		conda activate flamingo && \
+		pip install uv && \
+		uv pip install --no-deps -r $(REQ_DIR)/flamingo.txt
 	@echo "flamingo environment ready!"
 
 llava:
 	@echo "Setting up llava environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/llava.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/llava.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && conda activate llava && uv pip install --system -r $(REQ_DIR)/llava.txt
+	source $$(conda info --base)/etc/profile.d/conda.sh && \
+		conda activate llava && \
+		pip install uv && \
+		uv pip install --no-deps -r $(REQ_DIR)/llava.txt
 	@echo "llava environment ready!"
 
 mbmu:
 	@echo "Setting up mbmu environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && conda activate mbmu && uv pip install --system -r $(REQ_DIR)/mbmu.txt
+	source $$(conda info --base)/etc/profile.d/conda.sh && \
+		conda activate mbmu && \
+		pip install uv && \
+		uv pip install --no-deps -r $(REQ_DIR)/mbmu.txt
 	@echo "mbmu environment ready!"
 
 huatuo1:
 	@echo "Setting up huatuo1 environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/huatuo1.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/huatuo1.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && conda activate huatuo1 && uv pip install --system -r $(REQ_DIR)/huatuo1.txt
+	source $$(conda info --base)/etc/profile.d/conda.sh && \
+		conda activate huatuo1 && \
+		pip install uv && \
+		uv pip install --no-deps -r $(REQ_DIR)/huatuo1.txt
 	@echo "huatuo1 environment ready!"
 
 moe:
 	@echo "Setting up moe environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/moe.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/moe.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && conda activate moe && uv pip install --system -r $(REQ_DIR)/moe.txt
+	source $$(conda info --base)/etc/profile.d/conda.sh && \
+		conda activate moe && \
+		pip install uv && \
+		uv pip install --no-deps -r $(REQ_DIR)/moe.txt
 	@echo "moe environment ready!"
 
 # --------- Utilities -----------
