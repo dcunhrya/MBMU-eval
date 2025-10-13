@@ -142,6 +142,7 @@ rich==14.1.0
 rpds-py==0.27.1
 rsa==4.9.1
 ruff==0.13.3
+sacremoses==0.1.1
 s3fs==0.4.2
 s3transfer==0.14.0
 safehttpx==0.1.6

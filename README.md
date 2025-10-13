@@ -11,13 +11,20 @@
 ## Conda Environments
 There are conda environments for specific models (shown in `adding_model.md`)
 
-List of conda environments:
+List of conda environments and their models:
 - flamingo
+    - Med-Flamingo
 - huatuo1
+    - HuatuoGPTVision-7b
 - llava
+    - LLaVA-Med, HuatuoGPT-Vision-34b
 - mbmu
+    - MedGemma, BioGPT
 - moe
+    - Med-MoE-StableLM
+    - Med-MoE-Phi
 - vivid
+    - VividMed
 
 `envs` contains yml file for each environment and `requirements` contains the txt files
 

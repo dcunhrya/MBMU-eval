@@ -11,11 +11,11 @@ All models shown in models.yaml to see how to call it in cli
 - Med-MoE-Phi (no good output)
 - HuatuoGPT-Vision-7B (no good output)
 - HuatuoGPT-Vision-34B (no good output)
+- BioGPT (LLM)
 
 ## In Progress
 - VividMed
 - RadFM
-- BioGPT (LLM)
 
 
 ## To Do
