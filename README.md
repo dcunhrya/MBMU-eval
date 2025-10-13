@@ -1,4 +1,4 @@
-# How to Run MBMU VLM Eval Kit
+# How to Run MBMU VLM Eval Kit (Adding Medical VLM Support)
 ## DO THIS BEFORE ANYTHING
 ** Note: You must be on a device that has a GPU available **
 1) Install git-lfs
@@ -49,6 +49,8 @@ Steps in case makefile doesn't work:
 
 ex) `python3 VLMEvalKit/run.py --data MICROBENCH --data_file uBench/uBench_classification_10.tsv --model med_gemma --verbose`
 
+## Adding a Benchmark/Dataset
+- Refer to `adding_benchmark.md`
 
-uv pip install --system -r requirements.txt
-conda env export --from-history > envs/vlmevalkit.yml
+## Adding a Model
+- Refer to `adding_model.md`
