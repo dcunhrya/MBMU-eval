@@ -1,4 +1,17 @@
 # How to Run MBMU VLM Eval Kit (Adding Medical VLM Support)
+## Models Supported
+- Med-Flamingo
+- HuatuoGPTVision-7B
+- LLaVA-Med
+- HuatuoGPT-Vision-34B
+- MedGemma
+- BioGPT
+- Lingshu-7B
+- Lingshu-32B
+- MedVLM-R1
+- Med-MoE-StableLM
+- Med-MoE-Phi
+
 ## DO THIS BEFORE ANYTHING
 ** Note: You must be on a device that has a GPU available **
 1) Install git-lfs
@@ -23,8 +36,6 @@ List of conda environments and their models:
 - moe
     - Med-MoE-StableLM
     - Med-MoE-Phi
-- vivid
-    - VividMed
 
 `envs` contains yml file for each environment and `requirements` contains the txt files
 
