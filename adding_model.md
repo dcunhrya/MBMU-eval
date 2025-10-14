@@ -14,9 +14,10 @@ All models shown in models.yaml to see how to call it in cli
 - BioGPT (LLM)
 - Lingshu-7B
 - Lingshu-32B
+- MedVLM-R1
+- Med-R1
 
 ## In Progress
-- VividMed
 - RadFM
 
 

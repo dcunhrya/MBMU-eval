@@ -26,15 +26,6 @@ models:
     temperature: 0.0
     top_p: 1.0
 
-  - name: llava_tri_pretrained
-    cls: LLaVATriPretrained
-    path: yunfeixie/LLaVA-Tri-Pretrained
-    device: cuda
-    dtype: auto
-    max_new_tokens: 128
-    temperature: 0.0
-    top_p: 1.0
-
   - name: med_moe_phi
     cls: LLaVAPhi
     path: "JsST/Med-MoE-stage3-llavaphi-2.7b-medmoe"
@@ -98,6 +89,14 @@ models:
   - name: lingshu32
     cls: Lingshu 
     path: "lingshu-medical-mllm/Lingshu-32B"
+    device: cuda
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
+
+  - name: medvlm-r1
+    cls: MedVLM_R1 
+    path: "JZPeterPan/MedVLM-R1"
     device: cuda
     max_new_tokens: 128
     temperature: 0.0
