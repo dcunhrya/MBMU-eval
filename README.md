@@ -19,7 +19,7 @@ List of conda environments and their models:
 - llava
     - LLaVA-Med, HuatuoGPT-Vision-34B
 - mbmu
-    - MedGemma, BioGPT, Lingshu-7B, Lingshu-32B
+    - MedGemma, BioGPT, Lingshu-7B, Lingshu-32B, MedVLM-R1
 - moe
     - Med-MoE-StableLM
     - Med-MoE-Phi
