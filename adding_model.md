@@ -6,10 +6,10 @@ All models shown in models.yaml to see how to call it in cli
 - Med_Gemma
 - Med-Flamingo (need sharding)
     - starts implementing more and more c code
-    -medflamingo
+    - medflamingo
 - Med-MoE-StableLM (no good output)
 - Med-MoE-Phi (no good output)
-- HuatuoGPT-Vision-7B (no good output)
+- HuatuoGPT-Vision-7B (no good output produces !!!!)
 - HuatuoGPT-Vision-34B (no good output)
 - BioGPT (LLM)
 
