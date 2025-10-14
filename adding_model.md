@@ -12,6 +12,8 @@ All models shown in models.yaml to see how to call it in cli
 - HuatuoGPT-Vision-7B (no good output produces !!!!)
 - HuatuoGPT-Vision-34B (no good output)
 - BioGPT (LLM)
+- Lingshu-7B
+- Lingshu-32B
 
 ## In Progress
 - VividMed

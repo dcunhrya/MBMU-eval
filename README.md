@@ -15,11 +15,11 @@ List of conda environments and their models:
 - flamingo
     - Med-Flamingo
 - huatuo1
-    - HuatuoGPTVision-7b
+    - HuatuoGPTVision-7B
 - llava
-    - LLaVA-Med, HuatuoGPT-Vision-34b
+    - LLaVA-Med, HuatuoGPT-Vision-34B
 - mbmu
-    - MedGemma, BioGPT
+    - MedGemma, BioGPT, Lingshu-7B, Lingshu-32B
 - moe
     - Med-MoE-StableLM
     - Med-MoE-Phi

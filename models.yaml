@@ -86,3 +86,19 @@ models:
     max_new_tokens: 128
     temperature: 0.0
     top_p: 1.0
+
+  - name: lingshu7
+    cls: Lingshu 
+    path: "lingshu-medical-mllm/Lingshu-7B"
+    device: cuda
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
+
+  - name: lingshu32
+    cls: Lingshu 
+    path: "lingshu-medical-mllm/Lingshu-32B"
+    device: cuda
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
