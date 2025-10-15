@@ -67,3 +67,6 @@ ex) `python3 VLMEvalKit/run.py --data MICROBENCH --data_file uBench/uBench_class
 
 ## Adding a Model
 - Refer to `documentation/adding_model.md`
+
+## Running a Model
+- Refer to `documentation/run_models.md`
