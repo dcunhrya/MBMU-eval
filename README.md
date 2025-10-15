@@ -2,8 +2,8 @@
 ## Models Supported
 - Med-Flamingo
 - HuatuoGPTVision-7B
-- LLaVA-Med
 - HuatuoGPT-Vision-34B
+- LLaVA-Med
 - MedGemma
 - BioGPT
 - Lingshu-7B
@@ -28,9 +28,9 @@ List of conda environments and their models:
 - flamingo
     - Med-Flamingo
 - huatuo1
-    - HuatuoGPTVision-7B
+    - HuatuoGPTVision-7B, HuatuoGPT-Vision-34B
 - llava
-    - LLaVA-Med, HuatuoGPT-Vision-34B
+    - LLaVA-Med
 - mbmu
     - MedGemma, BioGPT, Lingshu-7B, Lingshu-32B, MedVLM-R1
 - moe
@@ -60,8 +60,10 @@ Steps in case makefile doesn't work:
 
 ex) `python3 VLMEvalKit/run.py --data MICROBENCH --data_file uBench/uBench_classification_10.tsv --model med_gemma --verbose`
 
+
+
 ## Adding a Benchmark/Dataset
-- Refer to `adding_benchmark.md`
+- Refer to `documentation/adding_benchmark.md`
 
 ## Adding a Model
-- Refer to `adding_model.md`
+- Refer to `documentation/adding_model.md`

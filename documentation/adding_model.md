@@ -1,7 +1,7 @@
 # Model Support
 Each model specific instructions shown below
 ## Models Added
-All models shown in models.yaml to see how to call it in cli
+All models shown in models.yaml or `documentation/run_models.md` to see how to call it in cli
 - LLava-Med
 - Med_Gemma
 - Med-Flamingo (need sharding)
@@ -9,8 +9,8 @@ All models shown in models.yaml to see how to call it in cli
     - medflamingo
 - Med-MoE-StableLM (no good output)
 - Med-MoE-Phi (no good output)
-- HuatuoGPT-Vision-7B (no good output produces !!!!)
-- HuatuoGPT-Vision-34B (no good output)
+- HuatuoGPT-Vision-7B
+- HuatuoGPT-Vision-34B (need sharding)
 - BioGPT (LLM)
 - Lingshu-7B
 - Lingshu-32B
@@ -18,8 +18,6 @@ All models shown in models.yaml to see how to call it in cli
 - Med-R1
 
 ## In Progress
-- RadFM
-
 
 ## To Do
 - BiomedGPT
@@ -35,8 +33,3 @@ My current prompt:
             f"Respond with the letter between ({letters[0]} and {letters[-1]}) corresponding to the answer choice from the options. No explanation. \n"
             # f"Choose the single best answer that answers the question. Respond with ONE capital letter only between ({letters[0]} and {letters[-1]}). \n"
         )`
-
-## Model Specific Instructions
-
-- MedGemma (`med_gemma`)
-    - Must login to huggingface and sign agreement for model `huggingface-cli login`

@@ -53,23 +53,6 @@ models:
     temperature: 0.0
     top_p: 1.0
 
-  - name: vividmed
-    cls: VividMed 
-    device: cuda
-    dtype: auto
-    max_new_tokens: 128
-    temperature: 0.0
-    top_p: 1.0
-
-  - name: radfm
-    cls: RadFM 
-    path: "chaoyi-wu/RadFM"
-    device: cuda
-    dtype: auto
-    max_new_tokens: 128
-    temperature: 0.0
-    top_p: 1.0
-
   - name: biogpt
     cls: BioGPT 
     path: "microsoft/biogpt"
