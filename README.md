@@ -1,4 +1,8 @@
 # How to Run MBMU VLM Eval Kit (Adding Medical VLM Support)
+This repo is built off VLMEvalKit to adding support for VLM inference on medical models and benchmarks
+
+Eval framework is based on VLMEvalKit with custom additions shown here: [dcunhrya/VLMEvalKit](https://github.com/dcunhrya/VLMEvalKit)
+
 ## Models Supported
 - Med-Flamingo
 - HuatuoGPTVision-7B
