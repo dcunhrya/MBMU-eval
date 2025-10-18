@@ -55,7 +55,6 @@ jsonschema-specifications==2025.9.1
 kiwisolver==1.4.9
 latex2mathml==3.78.1
 lit==18.1.8
--e git+https://github.com/haotian-liu/LLaVA@c121f0432da27facab705978f83c4ada465e46fd#egg=llava
 markdown-it-py==4.0.0
 markdown2==2.5.4
 MarkupSafe==2.1.5
@@ -168,7 +167,6 @@ urllib3==2.5.0
 uv==0.9.2
 uvicorn==0.37.0
 validators==0.35.0
--e git+https://github.com/dcunhrya/VLMEvalKit.git@3ead64034525f09eab4e4ccbf2b5ec4dfa39eddb#egg=vlmeval
 wavedrom==2.0.3.post3
 wcwidth==0.2.14
 websockets==11.0.3
