@@ -160,7 +160,7 @@ timm==0.6.13
 tokenizers==0.20.3
 tomlkit==0.13.3
 toolz==1.0.0
-torch==2.5.1+cu121
+torch==2.5.1+cu124
 torchvision==0.15.2
 tqdm==4.67.1
 traitlets==5.14.3
