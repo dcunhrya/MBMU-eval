@@ -25,45 +25,14 @@ endef
 
 # --------- Git deps (editable installs) ----------
 # VLMEvalKit pinned to a specific commit, installed editable
-VLM_REPO    ?= https://github.com/dcunhrya/VLMEvalKit.git
-VLM_DIR     ?= external/VLMEvalKit
-VLM_COMMIT  ?= 3ead64034525f09eab4e4ccbf2b5ec4dfa39eddb
-
-LLAVA_REPO   ?= https://github.com/haotian-liu/LLaVA.git
-LLAVA_DIR    ?= external/LLaVA
-LLAVA_COMMIT ?= c121f0432da27facab705978f83c4ada465e46fd
 
 .PHONY: all flamingo llava mbmu huatuo1 moe clean help git-deps git-vlmevalkit # git-llava
 
 all: flamingo llava mbmu huatuo1 moe
 
 # ---------- Git deps ----------
-git-deps: git-vlmevalkit
-	@echo "Git dependencies ready."
-
-git-vlmevalkit:
-	@mkdir -p external
-	@if [ -d "$(VLM_DIR)/.git" ]; then \
-	  echo "→ Updating $(VLM_DIR)"; \
-	  git -C "$(VLM_DIR)" fetch --all --tags --prune; \
-	else \
-	  echo "→ Cloning $(VLM_REPO) into $(VLM_DIR)"; \
-	  git clone "$(VLM_REPO)" "$(VLM_DIR)"; \
-	fi
-	@echo "→ Checking out $(VLM_COMMIT)"; \
-	git -C "$(VLM_DIR)" checkout --quiet "$(VLM_COMMIT)"
-
-git-llava:
-	@mkdir -p external
-	@if [ -d "$(LLAVA_DIR)/.git" ]; then \
-	  echo "→ Updating $(LLAVA_DIR)"; \
-	  git -C "$(LLAVA_DIR)" fetch --all --tags --prune; \
-	else \
-	  echo "→ Cloning $(LLAVA_REPO) into $(LLAVA_DIR)"; \
-	  git clone "$(LLAVA_REPO)" "$(LLAVA_DIR)"; \
-	fi
-	@echo "→ Checking out $(LLAVA_COMMIT)"; \
-	git -C "$(LLAVA_DIR)" checkout --quiet "$(LLAVA_COMMIT)"
+submodules:
+	git submodule update --init --recursive
 
 # --------- Targets ------------
 # flamingo:
@@ -75,46 +44,50 @@ git-llava:
 # 		uv pip install --no-deps -r $(REQ_DIR)/flamingo.txt
 # 	@echo "flamingo environment ready!"
 
-flamingo:
+flamingo: submodules
 	@echo "Setting up flamingo environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/flamingo.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/flamingo.yml
 	@$(call ACTIVATE,flamingo,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/flamingo.txt)
+	@$(call ACTIVATE,flamingo,pip install -e ./MBMU-eval/VLMEvalKit)
 	@echo "flamingo environment ready!"
 
-llava:
+llava: submodules
 	@echo "Setting up llava environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/llava.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/llava.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && \
-		conda activate llava && \
-		pip install uv && \
-		uv pip install --no-deps -r $(REQ_DIR)/llava.txt
+	$(CONDA_CMD) env create -f $(ENV_DIR)/llava.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/llava.yml
+	@$(call ACTIVATE,llava,pip install -e ./MBMU-eval/VLMEvalKit)
+	@$(call ACTIVATE,llava,pip install -e ./MBMU-eval/LLaVA)
+	@$(call ACTIVATE,llava,pip install -e ./MBMU-eval/LLavaMed)
 	@echo "llava environment ready!"
 
-mbmu:
+mbmu: submodules
 	@echo "Setting up mbmu environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && \
-		conda activate mbmu && \
-		pip install uv && \
-		uv pip install --no-deps -r $(REQ_DIR)/mbmu.txt
+	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
+	@$(call ACTIVATE,mbmu,pip install -e ./MBMU-eval/VLMEvalKit)
 	@echo "mbmu environment ready!"
 
-huatuo1:
+# huatuo1:
+# 	@echo "Setting up huatuo1 environment..."
+# 	$(CONDA_CMD) env create -f $(ENV_DIR)/huatuo1.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/huatuo1.yml
+# 	source $$(conda info --base)/etc/profile.d/conda.sh && \
+# 		conda activate huatuo1 && \
+# 		pip install uv && \
+# 		uv pip install --no-deps -r $(REQ_DIR)/huatuo1.txt
+# 	@echo "huatuo1 environment ready!"
+
+huatuo1: submodules
 	@echo "Setting up huatuo1 environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/huatuo1.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/huatuo1.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && \
-		conda activate huatuo1 && \
-		pip install uv && \
-		uv pip install --no-deps -r $(REQ_DIR)/huatuo1.txt
+	@$(call ACTIVATE,huatuo1,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/huatuo1.txt)
+	@$(call ACTIVATE,huatuo1,pip install -e ./MBMU-eval/VLMEvalKit)
 	@echo "huatuo1 environment ready!"
 
-moe:
+moe: submodules
 	@echo "Setting up moe environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/moe.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/moe.yml
-	source $$(conda info --base)/etc/profile.d/conda.sh && \
-		conda activate moe && \
-		pip install uv && \
-		uv pip install --no-deps -r $(REQ_DIR)/moe.txt
+	@$(call ACTIVATE,moe,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/moe.txt)
+	@$(call ACTIVATE,moe,pip install -e ./MBMU-eval/VLMEvalKit)
 	@echo "moe environment ready!"
 
 # --------- Utilities -----------

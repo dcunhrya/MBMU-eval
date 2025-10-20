@@ -175,7 +175,6 @@ urllib3==2.5.0
 uv==0.9.2
 uvicorn==0.37.0
 validators==0.35.0
--e git+https://github.com/dcunhrya/VLMEvalKit.git@0b7dac157dd88cb18a917747cb4e64166c1db5fd#egg=vlmeval
 wandb==0.15.12
 wavedrom==2.0.3.post3
 wcwidth==0.2.14
