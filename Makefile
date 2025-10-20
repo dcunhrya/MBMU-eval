@@ -65,6 +65,7 @@ mbmu: submodules
 	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
 	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
 	@$(call ACTIVATE,mbmu,pip install -e ./VLMEvalKit)
+	@$(call ACTIVATE,mbmu,pip install -e ./LLavaMed)
 	@echo "mbmu environment ready!"
 
 # huatuo1:
@@ -79,7 +80,7 @@ mbmu: submodules
 huatuo1: submodules
 	@echo "Setting up huatuo1 environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/huatuo1.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/huatuo1.yml
-	@$(call ACTIVATE,huatuo1,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/huatuo1.txt)
+	@$(call ACTIVATE,huatuo1,pip install -q uv && uv pip install --no-deps --index-strategy unsafe-best-match -r $(REQ_DIR)/huatuo1.txt)
 	@$(call ACTIVATE,huatuo1,pip install -e ./VLMEvalKit)
 	@echo "huatuo1 environment ready!"
 
@@ -88,6 +89,7 @@ moe: submodules
 	$(CONDA_CMD) env create -f $(ENV_DIR)/moe.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/moe.yml
 	@$(call ACTIVATE,moe,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/moe.txt)
 	@$(call ACTIVATE,moe,pip install -e ./VLMEvalKit)
+	@$(call ACTIVATE,moe,pip install -e ./MedMoE)
 	@echo "moe environment ready!"
 
 # --------- Utilities -----------
