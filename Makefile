@@ -80,8 +80,9 @@ mbmu: submodules
 huatuo1: submodules
 	@echo "Setting up huatuo1 environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/huatuo1.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/huatuo1.yml
-	@$(call ACTIVATE,huatuo1,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/huatuo1.txt)
+	@$(call ACTIVATE,huatuo1,pip install -q uv)
 	@$(call ACTIVATE,huatuo1,pip install -e ./VLMEvalKit)
+	@$(call ACTIVATE,huatuo1,uv pip install --no-deps -r $(REQ_DIR)/huatuo1.txt)
 	@echo "huatuo1 environment ready!"
 
 moe: submodules
