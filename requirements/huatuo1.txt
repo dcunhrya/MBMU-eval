@@ -5,6 +5,7 @@
 --no-binary=tiktoken
 --no-binary=timeout-decorator
 --no-binary=wavedrom
+--no-binary=av
 
 accelerate==1.10.1
 aiofiles==24.1.0
