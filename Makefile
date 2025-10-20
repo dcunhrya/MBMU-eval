@@ -48,23 +48,23 @@ flamingo: submodules
 	@echo "Setting up flamingo environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/flamingo.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/flamingo.yml
 	@$(call ACTIVATE,flamingo,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/flamingo.txt)
-	@$(call ACTIVATE,flamingo,pip install -e ./MBMU-eval/VLMEvalKit)
+	@$(call ACTIVATE,flamingo,pip install -e ./VLMEvalKit)
 	@echo "flamingo environment ready!"
 
 llava: submodules
 	@echo "Setting up llava environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/llava.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/llava.yml
 	$(CONDA_CMD) env create -f $(ENV_DIR)/llava.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/llava.yml
-	@$(call ACTIVATE,llava,pip install -e ./MBMU-eval/VLMEvalKit)
-	@$(call ACTIVATE,llava,pip install -e ./MBMU-eval/LLaVA)
-	@$(call ACTIVATE,llava,pip install -e ./MBMU-eval/LLavaMed)
+	@$(call ACTIVATE,llava,pip install -e ./VLMEvalKit)
+	@$(call ACTIVATE,llava,pip install -e ./LLaVA)
+	@$(call ACTIVATE,llava,pip install -e ./LLavaMed)
 	@echo "llava environment ready!"
 
 mbmu: submodules
 	@echo "Setting up mbmu environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
 	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
-	@$(call ACTIVATE,mbmu,pip install -e ./MBMU-eval/VLMEvalKit)
+	@$(call ACTIVATE,mbmu,pip install -e ./VLMEvalKit)
 	@echo "mbmu environment ready!"
 
 # huatuo1:
@@ -80,14 +80,14 @@ huatuo1: submodules
 	@echo "Setting up huatuo1 environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/huatuo1.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/huatuo1.yml
 	@$(call ACTIVATE,huatuo1,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/huatuo1.txt)
-	@$(call ACTIVATE,huatuo1,pip install -e ./MBMU-eval/VLMEvalKit)
+	@$(call ACTIVATE,huatuo1,pip install -e ./VLMEvalKit)
 	@echo "huatuo1 environment ready!"
 
 moe: submodules
 	@echo "Setting up moe environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/moe.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/moe.yml
 	@$(call ACTIVATE,moe,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/moe.txt)
-	@$(call ACTIVATE,moe,pip install -e ./MBMU-eval/VLMEvalKit)
+	@$(call ACTIVATE,moe,pip install -e ./VLMEvalKit)
 	@echo "moe environment ready!"
 
 # --------- Utilities -----------
