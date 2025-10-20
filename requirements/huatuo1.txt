@@ -162,7 +162,8 @@ tomlkit==0.13.3
 toolz==1.0.0
 --index-url https://download.pytorch.org/whl/cu121
 --extra-index-url https://pypi.org/simple
-torch==2.5.1torchvision==0.15.2
+torch==2.5.1
+torchvision==0.15.2
 tqdm==4.67.1
 traitlets==5.14.3
 transformers==4.45.0
