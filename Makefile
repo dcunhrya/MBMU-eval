@@ -47,25 +47,28 @@ submodules:
 flamingo: submodules
 	@echo "Setting up flamingo environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/flamingo.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/flamingo.yml
-	@$(call ACTIVATE,flamingo,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/flamingo.txt)
+	@$(call ACTIVATE,flamingo,pip install -q uv)
 	@$(call ACTIVATE,flamingo,pip install -e ./VLMEvalKit)
+	@$(call ACTIVATE,flamingo,uv pip install --no-deps -r $(REQ_DIR)/flamingo.txt)
 	@echo "flamingo environment ready!"
 
 llava: submodules
 	@echo "Setting up llava environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/llava.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/llava.yml
-	$(CONDA_CMD) env create -f $(ENV_DIR)/llava.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/llava.yml
+	@$(call ACTIVATE,llava,pip install -q uv)
 	@$(call ACTIVATE,llava,pip install -e ./VLMEvalKit)
 	@$(call ACTIVATE,llava,pip install -e ./LLaVA)
 	@$(call ACTIVATE,llava,pip install -e ./LLavaMed)
+	@$(call ACTIVATE,llava,uv pip install --no-deps -r $(REQ_DIR)/llava.txt)
 	@echo "llava environment ready!"
 
 mbmu: submodules
 	@echo "Setting up mbmu environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
-	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
+	@$(call ACTIVATE,mbmu,pip install -q uv)
 	@$(call ACTIVATE,mbmu,pip install -e ./VLMEvalKit)
 	@$(call ACTIVATE,mbmu,pip install -e ./LLavaMed)
+	@$(call ACTIVATE,mbmu,uv pip install --no-deps -r $(REQ_DIR)/mbmu.txt)
 	@echo "mbmu environment ready!"
 
 # huatuo1:
@@ -88,9 +91,10 @@ huatuo1: submodules
 moe: submodules
 	@echo "Setting up moe environment..."
 	$(CONDA_CMD) env create -f $(ENV_DIR)/moe.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/moe.yml
-	@$(call ACTIVATE,moe,pip install -q uv && uv pip install --no-deps -r $(REQ_DIR)/moe.txt)
+	@$(call ACTIVATE,moe,pip install -q uv)
 	@$(call ACTIVATE,moe,pip install -e ./VLMEvalKit)
 	@$(call ACTIVATE,moe,pip install -e ./MedMoE)
+	@$(call ACTIVATE,moe,uv pip install --no-deps -r $(REQ_DIR)/moe.txt)
 	@echo "moe environment ready!"
 
 # --------- Utilities -----------
