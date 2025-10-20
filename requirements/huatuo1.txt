@@ -5,8 +5,6 @@
 --no-binary=tiktoken
 --no-binary=timeout-decorator
 --no-binary=wavedrom
---no-binary=av
---no-binary=numpy
 
 accelerate==1.10.1
 aiofiles==24.1.0
@@ -20,7 +18,7 @@ anyio==4.11.0
 appdirs==1.4.4
 asttokens==3.0.0
 attrs==25.4.0
-av==16.0.1
+# av==16.0.1
 backoff==2.2.1
 bitsandbytes==0.41.0
 Brotli==1.1.0
@@ -81,7 +79,7 @@ multidict==6.7.0
 narwhals==2.7.0
 networkx==3.5
 nltk==3.9.2
-numpy==1.26.0
+# numpy==1.26.4
 nvidia-cublas-cu11==11.10.3.66
 nvidia-cublas-cu12==12.1.3.1
 nvidia-cuda-cupti-cu11==11.7.101
