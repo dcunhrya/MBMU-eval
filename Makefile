@@ -57,8 +57,8 @@ llava: submodules
 	$(CONDA_CMD) env create -f $(ENV_DIR)/llava.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/llava.yml
 	@$(call ACTIVATE,llava,pip install -q uv)
 	@$(call ACTIVATE,llava,pip install -e ./VLMEvalKit)
-	@$(call ACTIVATE,llava,pip install -e ./LLaVA)
-	@$(call ACTIVATE,llava,pip install -e ./LLavaMed)
+	@$(call ACTIVATE,llava,pip install -e ./VLMEvalKit/LLaVA)
+	@$(call ACTIVATE,llava,pip install -e ./VLMEvalKit/LLavaMed)
 	@$(call ACTIVATE,llava,uv pip install --no-deps -r $(REQ_DIR)/llava.txt)
 	@echo "llava environment ready!"
 
@@ -67,7 +67,7 @@ mbmu: submodules
 	$(CONDA_CMD) env create -f $(ENV_DIR)/mbmu.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/mbmu.yml
 	@$(call ACTIVATE,mbmu,pip install -q uv)
 	@$(call ACTIVATE,mbmu,pip install -e ./VLMEvalKit)
-	@$(call ACTIVATE,mbmu,pip install -e ./LLavaMed)
+	@$(call ACTIVATE,mbmu,pip install -e ./VLMEvalKit/LLavaMed)
 	@$(call ACTIVATE,mbmu,uv pip install --no-deps -r $(REQ_DIR)/mbmu.txt)
 	@echo "mbmu environment ready!"
 
@@ -93,7 +93,7 @@ moe: submodules
 	$(CONDA_CMD) env create -f $(ENV_DIR)/moe.yml || $(CONDA_CMD) env update -f $(ENV_DIR)/moe.yml
 	@$(call ACTIVATE,moe,pip install -q uv)
 	@$(call ACTIVATE,moe,pip install -e ./VLMEvalKit)
-	@$(call ACTIVATE,moe,pip install -e ./MedMoE)
+	@$(call ACTIVATE,moe,pip install -e ./VLMEvalKit/MedMoE)
 	@$(call ACTIVATE,moe,uv pip install --no-deps -r $(REQ_DIR)/moe.txt)
 	@echo "moe environment ready!"
 
