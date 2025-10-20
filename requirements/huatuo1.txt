@@ -3,6 +3,7 @@
 --only-binary=:all:
 --no-binary=pathtools
 --no-binary=tiktoken
+--no-binary=timeout-decorator
 
 accelerate==1.10.1
 aiofiles==24.1.0
