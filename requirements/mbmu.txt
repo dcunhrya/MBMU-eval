@@ -72,7 +72,7 @@ latex2mathml==3.78.1
 linkify-it-py==2.0.3
 lit==18.1.8
 llava==0.0.1.dev0
--e ./VLMEvalKit/LLava-Med
+# -e ./VLMEvalKit/LLava-Med
 markdown-it-py==2.2.0
 markdown2==2.5.4
 markupsafe==2.1.5
@@ -157,7 +157,6 @@ safetensors==0.6.2
 scikit-learn==1.2.2
 scipy==1.16.2
 semantic-version==2.10.0
-# sentencepiece==0.2.1
 setuptools==78.1.1
 shellingham==1.5.4
 shortuuid==1.0.13
