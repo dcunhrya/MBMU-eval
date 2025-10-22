@@ -194,7 +194,7 @@ uvicorn==0.37.0
 validators==0.35.0
 wavedrom==2.0.3.post3
 wcwidth==0.2.14
-websockets==11.0.3
+websockets
 wheel==0.45.1
 xlsxwriter==3.2.9
 xxhash==3.5.0
