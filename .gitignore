@@ -5,6 +5,16 @@ microbench_add.ipynb.idea/
 outputs/
 adapter_dir/
 cache_dir/
+SLAKE/
+configs/
+download_ds_slake.py
+download_ds_vqarad.py
+eval_scripts/
+subsample.py
+wandb/
+test.py
+main.py
+LMUData/
 
 # Byte-compiled / optimized / DLL files
 VLMEvalKit/**/__pycache__/

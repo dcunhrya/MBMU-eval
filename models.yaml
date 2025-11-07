@@ -44,9 +44,18 @@ models:
     temperature: 0.0
     top_p: 1.0
 
-  - name: med_gemma
-    cls: HuggingFaceVisionVLM 
+  - name: med_gemma4
+    cls: MedGemma4 
     path: google/medgemma-4b-it
+    device: cuda
+    dtype: auto
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
+
+  - name: med_gemma27
+    cls: MedGemma27
+    path: google/medgemma-27b-it
     device: cuda
     dtype: auto
     max_new_tokens: 128
@@ -62,7 +71,7 @@ models:
     top_p: 1.0
 
   - name: lingshu7
-    cls: Lingshu 
+    cls: Lingshu7 
     path: "lingshu-medical-mllm/Lingshu-7B"
     device: cuda
     max_new_tokens: 128
@@ -70,7 +79,7 @@ models:
     top_p: 1.0
 
   - name: lingshu32
-    cls: Lingshu 
+    cls: Lingshu32 
     path: "lingshu-medical-mllm/Lingshu-32B"
     device: cuda
     max_new_tokens: 128
